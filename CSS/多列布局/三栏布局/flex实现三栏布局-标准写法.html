@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			display:flex;
+		}
+		.container,.left,.middle,.right{
+			height:100px;
+		}
+		.middle{
+			background-color: blue;
+			/*按比例分配剩余空间*/
+			flex-grow: 1;
+		}
+		.left{
+			background-color: red;
+			/*排序方式，默认是0*/
+			order:-1;
+			/*在分配剩余空间之前所占的空间大小*/
+			flex-basis:100px;
+		}
+		
+		.right{
+			background-color: yellow;
+			/*在分配剩余空间之前所占的空间大小*/
+			flex-basis:100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="middle"></div>
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.main,.left,.right{
+			position: relative;
+			height:100px;
+			float: left;
+		}
+		.container{
+			/*中间内容的左右padding等于左右元素宽度*/
+			margin:0 100px 0 100px;
+		}
+		.main{
+			height:300px;
+			width: 100%;
+			background-color: yellow;
+		}
+		.left{
+			background-color: red;
+			width:100px;
+			/*负margin会换到上一行*/
+			margin-left:-100%;
+			/*填满中间元素的左padding*/
+			left: -100px;
+		}
+		.right{
+			background-color: red;
+			width:100px;
+			/*负margin会换到上一行*/
+			margin-left:-100px;
+			/*填满中间元素的右padding*/
+			right:-100px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="main">main</div>
+		<div class="left">left</div>
+		<div class="right">right</div>
+	</div>
+</body>
+</html>
